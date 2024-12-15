@@ -9,20 +9,20 @@
     date: datetime(year: 2024, month: 12, day: 15).display("[month repr:long] [day], [year repr:full]"),
   ),
   config-store(
-    color-theme: colorthemes.hazy,
-    // show-header: true,
     show-footer: false,
-    footer-show-subtitle: false,
   ),
   config-page(
     footer: none,
     header: none,
     margin: (top: 1em, right: 1em, bottom: 1em, left: 1em),
-  )
+  ),
+  // config-colors(
+  //   neutral: colorthemes.lavender.at(1)
+  // )
 )
 
 #show heading.where(depth: 2): set heading(
-  numbering: (..n) => text(fill: rgb("#00ff00ff"))[>]
+  numbering: (..n) => /*text(fill: rgb("#00ff00ff"))[>]*/ ">"
 )
 
 #title-slide[]
