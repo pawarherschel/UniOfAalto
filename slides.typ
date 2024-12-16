@@ -233,6 +233,9 @@
 #focus-slide(theme: "lblue", show-counter: false)[
   #text(font: "NotoSerif NF", style: "italic", weight: "light", stretch: 70%, size: 42pt, fill: rgb("#00000077"))[#quote(attribution: link("https://viridianmasquerade.tumblr.com/post/634434560565936128/smokeinsilence-have-you-ever-noticed-you-pick-up")[viridianmasquerade])[... I am a mosaic of everyone I've ever loved, even for a heartbeat.]]
 ]
+#focus-slide(theme: "dblue", show-counter: false)[
+  #text(font: "NotoSerif NF", style: "italic", weight: "light", stretch: 70%, size: 42pt, fill: rgb("#00000077"))[#smallcaps[This Page Has Been Intentionally Left Blank]]
+]
 #focus-slide(theme: "lblue", show-counter: false)[
   #text(font: "NotoSerif NF", style: "italic", weight: "light", stretch: 70%, size: 42pt, fill: rgb("#00000077"))[#quote(attribution: [Herschel Pravin Pawar])[I am the culmination of everything I've learnt]]
 ]

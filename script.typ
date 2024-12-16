@@ -1,6 +1,6 @@
 = self introduction
 
-Heya, My name is Herschel Pravin Pawar. This video has been recorded as part of deliverables for admission process for Aalto School of Science's Game Design and Development. Everything you see in this video: script, links, and images are part of a Typst document available freely on GitHub under a public domain license. 
+Heya, My name is Herschel Pravin Pawar. This video has been recorded as part of deliverables for admission process of Aalto School of Science's Game Design and Development. Everything you see in this video: script, links, and images are part of a Typst document available freely on GitHub under a public domain license. 
 
 
 
