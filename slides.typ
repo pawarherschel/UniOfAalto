@@ -483,7 +483,7 @@
 ]
 
 #align(bottom)[
-  Made with #text(fill: rgb("#b19cd9"))[#emoji.heart] using
+  Made with #text(fill: rgb("#b19cd9"))[#emoji.heart.purple] using
   - #link("https://typst.app/")[Typst]
   - #link("https://touying-typ.github.io/")[Touying] and #link("https://github.com/spidersouris/touying-unistra-pristine")[Unistra Pristine Theme]
   - #link("https://www.jetbrains.com/lp/mono/")[JetBrains Mono] and #link("https://fonts.google.com/noto/specimen/Noto+Serif")[NotoSerif]
