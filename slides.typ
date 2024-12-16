@@ -241,17 +241,65 @@
     stretch: 70%,
   )[= Creative exploration]]
 
-#for title in (
-  "Photoshop",
-  "Pixel Art and Vector Graphics",
-) {
-  focus-slide(theme: "lblue", show-counter: false)[#text(
-      font: "NotoSerif NF",
-      style: "italic",
-      weight: "light",
-      stretch: 70%,
-    )[== #title]]
-}
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(
+    font: "NotoSerif NF",
+    style: "italic",
+    weight: "light",
+    stretch: 70%,
+  )[== Photoshop]
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(
+    font: "NotoSerif NF",
+    style: "italic",
+    weight: "light",
+    stretch: 70%,
+  )[=== VRoid Model]
+  #text(size: 28pt)[
+    #figure(image("kait.png", height: 70%), caption: [VRoid Model "Kait"])
+  ]
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(
+    font: "NotoSerif NF",
+    style: "italic",
+    weight: "light",
+    stretch: 70%,
+  )[== Pixel Art and Vector Graphics]
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(
+    font: "NotoSerif NF",
+    style: "italic",
+    weight: "light",
+    stretch: 70%,
+  )[=== Pixel Art]
+  #text(size: 26pt)[
+    #figure(
+      image("rfl.png", height: 70%),
+      caption: [Fanart for the meetup "#link("https://lunch.rs/")[Rust for Lunch]"],
+    )
+  ]
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(
+    font: "NotoSerif NF",
+    style: "italic",
+    weight: "light",
+    stretch: 70%,
+  )[== Logo]
+  #text(size: 26pt)[
+    #figure(
+      image("kibty.svg", height: 60%),
+      caption: [Logo],
+    )
+  ]
+]
 
 #focus-slide(theme: "dblue", show-counter: false)[
   #text(
@@ -273,30 +321,25 @@
   )[== Scanlation]
 ]
 
-== Logo
-
-#figure(
-  image("kibty.svg", height: 74%),
-  caption: [Logo],
-)
-
 == #link("https://github.com/pawarherschel/krita-palette-creator")[GIMP Palette Creator]
 
-#columns(2)[
+#text(size: 22pt)[
+  #columns(2)[
+    #figure(
+      image("env.png", height: 52.3%),
+      caption: [Original Image],
+    )
+    #colbreak()
+    #figure(
+      image("env.png.5.png", height: 63.1%),
+      caption: [Quantized Image],
+    )
+  ]
   #figure(
-    image("env.png", height: 49%),
-    caption: [Original Image],
-  )
-  #colbreak()
-  #figure(
-    image("env.png.5.png", height: 59%),
-    caption: [Quantized Image],
+    image("env.png.5.png.gpl.png", height: 10%),
+    caption: [Generated Palette with Quantization = 5],
   )
 ]
-#figure(
-  image("env.png.5.png.gpl.png", height: 10%),
-  caption: [Generated Palette with Quantization = 5],
-)
 
 #pagebreak()
 
@@ -361,6 +404,15 @@
 ]
 
 #focus-slide(theme: "lblue", show-counter: false)[
+  #text(size: 28pt)[
+    #figure(
+      image("viridianmasquerade.png", height: 90%),
+      caption: [Tumblr Post by #link("https://viridianmasquerade.tumblr.com/")[viridianmasquerade]],
+    )
+  ]
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
   #text(
     font: "NotoSerif NF",
     style: "italic",
@@ -374,6 +426,7 @@
     )[... I am a mosaic of everyone I've ever loved, even for a heartbeat.]
   ]
 ]
+
 #focus-slide(theme: "dblue", show-counter: false)[
   #text(
     font: "NotoSerif NF",
