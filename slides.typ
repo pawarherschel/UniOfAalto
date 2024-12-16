@@ -268,7 +268,7 @@
     style: "italic",
     weight: "light",
     stretch: 70%,
-  )[== Pixel Art and Vector Graphics]
+  )[== Pixel Art and #linebreak() Vector Graphics]
 ]
 
 #focus-slide(theme: "lblue", show-counter: false)[
@@ -341,7 +341,16 @@
   )
 ]
 
-#pagebreak()
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(
+    font: "NotoSerif NF",
+    style: "italic",
+    weight: "light",
+    stretch: 70%,
+  )[=== Rosettacode]
+  #linebreak()
+  Contribution available at #link("https://rosettacode.org/wiki/Color_quantization#Rust")[Color quantization/Rust]
+]
 
 #focus-slide(theme: "dblue", show-counter: false)[
   #text(
@@ -448,4 +457,32 @@
   )[
     #quote(attribution: [Herschel Pravin Pawar])[I am the culmination of everything I've learnt]
   ]
+]
+
+= Acknowledgement
+
+#align(horizon)[
+  #text[
+    - fivepb for helping me push through when I wasn't able to
+    - mlembug for going through the script
+    - Shashank for checking the presentation
+    - Henna for helping me practice and pushing me towards getting higher education
+    - and many many many other people
+  ]
+]
+
+= Heavily Inspired by
+
+#align(horizon)[
+  #text[
+    - #link("https://www.youtube.com/@Acerola_t")[Acerola] for the general vibes of the presentation
+    - #link("https://www.youtube.com/@NoBoilerplate")[No Boilerplate] for the introduction
+  ]
+]
+
+#align(bottom)[
+  Made with #text(fill: rgb("#b19cd9"))[#emoji.heart] using
+  - #link("https://typst.app/")[Typst]
+  - #link("https://touying-typ.github.io/")[Touying] and #link("https://github.com/spidersouris/touying-unistra-pristine")[Unistra Pristine Theme]
+  - #link("https://www.jetbrains.com/lp/mono/")[JetBrains Mono] and #link("https://fonts.google.com/noto/specimen/Noto+Serif")[NotoSerif]
 ]

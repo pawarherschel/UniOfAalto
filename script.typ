@@ -79,7 +79,7 @@ I have tried to mix programming and creative work a few times but due to lack of
 I created a GIMP palette creator, which krita can import. It takes an image as input and the level of quantization. It quantizes the image, and then creates the palette file. Another input you can give to the creator is similarity amount, which it uses to reduce the number of quantized colors.
 I was then able to contribute to rosettacode (https://rosettacode.org/wiki/Color_quantization#Rust).
 
-Another experiment I did was to try create psychedelic gifs programmatically by doing hue shift on an image.
+Another experiment I did was to try create psychedelic gifs programmatically by doing hue shift on an image however, this one was a massive failure due to lack of knowledge.
 
 = BG
 
