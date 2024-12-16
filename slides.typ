@@ -24,6 +24,8 @@
 #show heading.where(depth: 3): set heading(numbering: (..n) => "=" * 3)
 #show heading.where(depth: 4): set heading(numbering: (..n) => "=" * 4)
 
+#show list: set list(marker: [-])
+
 #title-slide[]
 
 = Self Introduction
