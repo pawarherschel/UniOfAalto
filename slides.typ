@@ -26,6 +26,32 @@
 
 #show list: set list(marker: [-])
 
+// Taken from the theme repository
+#let _custom-quote(it, lquote, rquote) = {
+  v(1em)
+  box(
+    fill: luma(86.27%, 0%), // alpha changed from 100% to 0%
+    outset: 1em,
+    width: 90%, // changed width from 100% to 90%
+    // smartquote() doesn't work properly here,
+    // probably because we're in a block
+    lquote
+      + it.body
+      + rquote
+      + if it.attribution != none {
+        set text(size: 0.8em)
+        linebreak()
+        h(1fr)
+        [\~ #it.attribution] // added a `~` to the start of attribution
+      },
+  )
+}
+
+
+#show quote: it => [
+  #_custom-quote(it, "« ", " »")
+]
+
 #title-slide[]
 
 = Self Introduction
@@ -37,14 +63,22 @@
   column-gutter: 2%,
   [#image("me.png", alt: "image of Herschel Pravin Pawar", height: 82%)],
   [
-    #block(height: auto)[#text(size: 33.6pt)[
-        *Herschel Pravin Pawar*
-        #text(size: 0.8em)[
-          #box(image("kibty.svg", height: 1em))
+    #align(left)[
+      #grid(
+        columns: 2,
+        rows: 1,
+        column-gutter: 2%,
+        [#image("kibty.svg", height: 3em)],
+        [
+          *Herschel Pravin Pawar*
           #link("https://sakurakat.systems")[
-            sakurakat.systems
-          ]]
-      ]]
+            #text(fill: black)[
+              sakurakat.systems
+            ]
+          ]
+        ],
+      )
+    ]
     #align(bottom)[
       #grid(
         columns: 2,
@@ -54,7 +88,7 @@
         [#image("cc.logo.svg", height: 1em)],
         [
           #link("https://github.com/pawarherschel/UniOfAalto")[
-            #text(size: 16pt)[GitHub:pawarherschel/UniOfAalto]
+            #text(size: 16pt, fill: black)[GitHub:pawarherschel/UniOfAalto]
           ]
         ],
       )
@@ -64,58 +98,28 @@
 
 
 
-#focus-slide(theme: "blue", show-counter: false)[#text(
+#focus-slide(theme: "blue", show-counter: false)[
+  #text(
     font: "NotoSerif NF",
     style: "italic",
     weight: "light",
     stretch: 70%,
   )[= Highlights]
 
-  #align(left)[
-    #text(fill: white, size: 28pt)[
-      #enum(numbering: n => "+")[
-        #link("https://github.com/pawarherschel/CovUniGJ2024")[Coventry University's Summer School Game Jam]][
-        #link("https://github.com/pawarherschel/GMTK2023")[GMTK's 2023 Game Jam]][
-        Bevy
+  #box(width: 80%)[
+    #align(horizon + left)[
+      #text(fill: white, size: 28pt)[
+        #enum(numbering: n => "+")[
+          #link("https://github.com/pawarherschel/CovUniGJ2024")[#text(
+              fill: white,
+            )[Coventry University's Summer School Game Jam]]][
+          #link("https://github.com/pawarherschel/GMTK2023")[#text(fill: white)[GMTK's 2023 Game Jam]]][
+          Bevy
+        ]
       ]
     ]
   ]
 ]
-
-= Game Development projects
-
-#focus-slide(theme: "blue", show-counter: false)[#text(
-    font: "NotoSerif NF",
-    style: "italic",
-    weight: "light",
-    stretch: 70%,
-  )[== #link("https://github.com/pawarherschel/CovUniGJ2024")[Coventry University's Summer School Game Jam]]]
-
-#focus-slide(theme: "lblue", show-counter: false)[
-  #table(columns: 1, rows: 2, stroke: 0pt,
-    [#block(height: 50%, width: 100%)[Continous Change]],
-    table.hline(stroke: 1pt),
-    [#block(height: 50%, width: 100%)[2D Platformer]]
-  )
-]
-
-#align(center)[=== Hero Switching]
-#figure(
-  image("hero switching.gif", height: 50%),
-  caption: [Hero Switching],
-)
-
-#align(center)[=== Us]
-#figure(
-  image("shashank and me.jpg", height: 75%),
-  caption: [Us],
-)
-
-#align(center)[=== Player Architecture]
-#figure(
-  image("player.svg", height: 75%),
-  caption: [Player Architecture],
-)
 
 #focus-slide(theme: "blue", show-counter: false)[
   #text(
@@ -123,31 +127,84 @@
     style: "italic",
     weight: "light",
     stretch: 70%,
-  )[== #link("https://github.com/pawarherschel/GMTK2023")[GMTK's 2023 Game Jam]]
+  )[
+    == #link("https://github.com/pawarherschel/CovUniGJ2024")[
+      #text(fill: white)[Coventry University's Summer School Game Jam]
+    ]
+  ]
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
+  #table(
+    columns: 1, rows: 2, stroke: 0pt,
+    [#block(height: 50%, width: 100%)[Continous Change]],
+    table.hline(stroke: 1pt + white),
+    [#block(height: 50%, width: 100%)[2D Platformer]]
+  )
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(size: 28pt)[
+    #figure(
+      image("hero switching.gif", height: 70%),
+      caption: [Hero Switching],
+    )
+  ]
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(size: 28pt)[
+    #figure(
+      image("shashank and me.jpg", height: 73%),
+      caption: [Us],
+    )
+  ]
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(size: 28pt)[
+    #figure(
+      image("player.svg", height: 70%),
+      caption: [Player Architecture],
+    )
+  ]
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(
+    font: "NotoSerif NF",
+    style: "italic",
+    weight: "light",
+    stretch: 70%,
+  )[== #link("https://github.com/pawarherschel/GMTK2023")[#text(fill: white)[GMTK's 2023 Game Jam]]]
 ]
 
 
 #focus-slide(theme: "lblue", show-counter: false)[Roles Reversed]
 
-#align(center)[=== Screenshot]
-#figure(
-  image("Cosmos Conquerors.png", height: 68%),
-  caption: [Screenshot],
-)
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(size: 28pt)[
+    #figure(
+      image("Cosmos Conquerors.png", height: 68%),
+      caption: [Screenshot],
+    )
+  ]
+]
 
-#pagebreak()
-
-#align(center)[=== Invaders Shooting]
-#columns(2)[
-  #figure(
-    image("invaders shooting.gif", height: 60%),
-    caption: [Invaders Shooting],
-  )
-  #colbreak()
-  #figure(
-    image("two invaders shooting.gif", height: 80%),
-    caption: [Two Invaders Shooting],
-  )
+#focus-slide(theme: "lblue", show-counter: false)[
+  #columns(2)[
+    #text(size: 28pt)[
+      #figure(
+        image("invaders shooting.gif", height: 75%),
+        caption: [Invaders Shooting],
+      )
+      #colbreak()
+      #figure(
+        image("two invaders shooting.gif", height: 75%),
+        caption: [Two Invaders Shooting],
+      )
+    ]
+  ]
 ]
 
 #focus-slide(theme: "dblue", show-counter: false)[
@@ -168,9 +225,13 @@
     weight: "light",
     stretch: 70%,
   )[== Bevy]
-  #align(left)[
-    #text(fill: white, size: 28pt, font: "JetBrains Mono NL")[
-      + #link("https://github.com/pawarherschel/bevy-pong")[Pong] (you can imagine)
+  #block(width: 80%)[
+    #align(left)[
+      #text(fill: white, size: 28pt, font: "JetBrains Mono NL")[
+        #enum(numbering: it => text(fill: white)[#it.])[
+          #link("https://github.com/pawarherschel/bevy-pong")[#text(fill: white)[Pong]] (you can imagine)
+        ]
+      ]
     ]
   ]
 ]
@@ -190,58 +251,65 @@
     style: "italic",
     weight: "light",
     stretch: 70%,
-  )[== #link("https://github.com/pawarherschel/vrcx-insights")[VRCX Insights]]
-
-  #align(left)[
-    #text(fill: white, size: 28pt)[
-      #enum(numbering: (.., n) => text(stroke: white)[#n.])[
-        Single Threaded
-      ][
-        Multithreading
-      ][
-        ???
-      ][
-        GPU
-      ][
-        Profit?
+  )[== #link("https://github.com/pawarherschel/vrcx-insights")[#text(fill: white)[VRCX Insights]]]
+  #box(width: 80%)[
+    #align(horizon + left)[
+      #text(fill: white, size: 28pt)[
+        #enum(numbering: (.., n) => text(stroke: white)[#n.])[
+          Single Threaded
+        ][
+          Multithreading
+        ][
+          ???
+        ][
+          GPU
+        ][
+          Profit?
+        ]
       ]
     ]
   ]
 ]
 
-#focus-slide(theme: "blue", show-counter: false)[#text(
+#focus-slide(theme: "blue", show-counter: false)[
+  #text(
     font: "NotoSerif NF",
     style: "italic",
     weight: "light",
     stretch: 70%,
-  )[== #link("https://github.com/pawarherschel/booth_archiver")[Booth Archiver]]
-
-  #align(left)[
-    #text(fill: white, size: 28pt)[
-      #enum(numbering: (
-        ..,
-        n,
-      ) => text(stroke: white)[#n.])[
-        Manually Maintained Excel Sheet
-      ][
-        Power Automate
-      ][
-        Python
-      ][
-        Rust Single Threaded
-      ][
-        Multithreading
+  )[== #link("https://github.com/pawarherschel/booth_archiver")[#text(fill: white)[Booth Archiver]]]
+  #box(width: 80%)[
+    #align(left)[
+      #text(fill: white, size: 28pt)[
+        #enum(
+          numbering: (
+            ..,
+            n,
+          ) => text(stroke: white)[#n.],
+        )[
+          Manually Maintained Excel Sheet
+        ][
+          Power Automate
+        ][
+          Python
+        ][
+          Rust Single Threaded
+        ][
+          Multithreading
+        ]
       ]
     ]
   ]
 ]
 
-#focus-slide(theme: "blue", show-counter: false)[#text(
+#focus-slide(theme: "blue", show-counter: false)[
+  #text(
     font: "NotoSerif NF",
     style: "italic",
     weight: "light",
     stretch: 70%,
-  )[= Creative exploration]]
+  )[= Creative exploration]
+]
 
 #focus-slide(theme: "lblue", show-counter: false)[
   #text(
@@ -283,7 +351,7 @@
   #text(size: 26pt)[
     #figure(
       image("rfl.png", height: 70%),
-      caption: [Fanart for the meetup "#link("https://lunch.rs/")[Rust for Lunch]"],
+      caption: [Fanart for the meetup "#link("https://lunch.rs/")[#text(fill: white)[Rust for Lunch]]"],
     )
   ]
 ]
@@ -294,13 +362,22 @@
     style: "italic",
     weight: "light",
     stretch: 70%,
-  )[== Logo]
+  )[=== Logo]
   #text(size: 26pt)[
     #figure(
       image("kibty.svg", height: 60%),
       caption: [Logo],
     )
   ]
+]
+
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(
+    font: "NotoSerif NF",
+    style: "italic",
+    weight: "light",
+    stretch: 70%,
+  )[== Scanlation]
 ]
 
 #focus-slide(theme: "dblue", show-counter: false)[
@@ -315,32 +392,27 @@
 ]
 
 #focus-slide(theme: "lblue", show-counter: false)[
-  #text(
-    font: "NotoSerif NF",
-    style: "italic",
-    weight: "light",
-    stretch: 70%,
-  )[== Scanlation]
+  == #link("https://github.com/pawarherschel/krita-palette-creator")[#text(fill: white)[GIMP/Krita Palette Creator]]
 ]
 
-== #link("https://github.com/pawarherschel/krita-palette-creator")[GIMP Palette Creator]
-
-#text(size: 22pt)[
-  #columns(2)[
+#focus-slide(theme: "lblue", show-counter: false)[
+  #text(size: 20pt)[
+    #columns(2)[
+      #figure(
+        image("env.png", height: 57.3%),
+        caption: [Original Image],
+      )
+      #colbreak()
+      #figure(
+        image("env.png.5.png", height: 57.3%),
+        caption: [Quantized Image],
+      )
+    ]
     #figure(
-      image("env.png", height: 52.3%),
-      caption: [Original Image],
-    )
-    #colbreak()
-    #figure(
-      image("env.png.5.png", height: 63.1%),
-      caption: [Quantized Image],
+      image("env.png.5.png.gpl.png", height: 10%),
+      caption: [Generated Palette with Quantization = 5],
     )
   ]
-  #figure(
-    image("env.png.5.png.gpl.png", height: 10%),
-    caption: [Generated Palette with Quantization = 5],
-  )
 ]
 
 #focus-slide(theme: "lblue", show-counter: false)[
@@ -351,7 +423,11 @@
     stretch: 70%,
   )[=== Rosettacode]
   #linebreak()
-  Contribution available at #link("https://rosettacode.org/wiki/Color_quantization#Rust")[Color quantization/Rust]
+  #text(size: 0.8em)[
+    Contribution available at
+    #linebreak()
+    #link("https://rosettacode.org/wiki/Color_quantization#Rust")[#text(fill: white)[Color quantization/Rust]]
+  ]
 ]
 
 #focus-slide(theme: "dblue", show-counter: false)[
@@ -374,17 +450,6 @@
   )[= Background]
 ]
 
-#focus-slide(theme: "dblue", show-counter: false)[
-  #text(
-    font: "NotoSerif NF",
-    style: "italic",
-    weight: "light",
-    stretch: 70%,
-    size: 42pt,
-    fill: rgb("#00000077"),
-  )[#smallcaps[This Page Has Been Intentionally Left Blank]]
-]
-
 #focus-slide(theme: "lblue", show-counter: false)[
   #text(
     font: "NotoSerif NF",
@@ -403,22 +468,11 @@
   )[= Conclusion]
 ]
 
-#focus-slide(theme: "dblue", show-counter: false)[
-  #text(
-    font: "NotoSerif NF",
-    style: "italic",
-    weight: "light",
-    stretch: 70%,
-    size: 42pt,
-    fill: rgb("#00000077"),
-  )[#smallcaps[This Page Has Been Intentionally Left Blank]]
-]
-
 #focus-slide(theme: "lblue", show-counter: false)[
   #text(size: 28pt)[
     #figure(
       image("viridianmasquerade.png", height: 90%),
-      caption: [Tumblr Post by #link("https://viridianmasquerade.tumblr.com/")[viridianmasquerade]],
+      caption: [Tumblr Post by #link("https://viridianmasquerade.tumblr.com/")[#text(fill: white)[viridianmasquerade]]],
     )
   ]
 ]
@@ -430,10 +484,11 @@
     weight: "light",
     stretch: 70%,
     size: 42pt,
-    fill: rgb("#00000077"),
   )[
     #quote(
-      attribution: link("https://viridianmasquerade.tumblr.com/post/634434560565936128/smokeinsilence-have-you-ever-noticed-you-pick-up")[viridianmasquerade],
+      attribution: link("https://viridianmasquerade.tumblr.com/post/634434560565936128/smokeinsilence-have-you-ever-noticed-you-pick-up")[#text(
+          fill: white,
+        )[viridianmasquerade]],
     )[... I am a mosaic of everyone I've ever loved, even for a heartbeat.]
   ]
 ]
@@ -454,10 +509,9 @@
     style: "italic",
     weight: "light",
     stretch: 70%,
-    size: 42pt,
-    fill: rgb("#00000077"),
+    size: 38pt,
   )[
-    #quote(attribution: [Herschel Pravin Pawar])[I am the culmination of everything I've learnt]
+    #quote[I am the culmination of everything I've learnt]
   ]
 ]
 
@@ -465,10 +519,10 @@
 
 #align(horizon)[
   #text[
-    - fivepb for helping me push through when I wasn't able to
-    - mlembug for going through the script
-    - Shashank for checking the presentation
-    - Henna for helping me practice and pushing me towards getting higher education
+    - #highlight(fill: colorthemes.lblue.at(1), extent: 10pt, radius: 30%)[fivepb] for helping me push through when I wasn't able to
+    - #highlight(fill: colorthemes.lblue.at(1), extent: 10pt, radius: 30%)[mlembug] for going through the script
+    - #highlight(fill: colorthemes.lblue.at(1), extent: 10pt, radius: 30%)[Shashank] and #highlight(fill: colorthemes.lblue.at(1), extent: 10pt, radius: 30%)[Divyesh] for checking the presentation
+    - #highlight(fill: colorthemes.lblue.at(1), extent: 10pt, radius: 30%)[Henna] for helping me practice and pushing me towards getting higher education
     - and many many many other people
   ]
 ]
@@ -477,14 +531,14 @@
 
 #align(horizon)[
   #text[
-    - #link("https://www.youtube.com/@Acerola_t")[Acerola] for the general vibes of the presentation
-    - #link("https://www.youtube.com/@NoBoilerplate")[No Boilerplate] for the introduction
+    - #link("https://www.youtube.com/@Acerola_t")[#text(fill: black)[Acerola]] for the general vibes of the presentation
+    - #link("https://www.youtube.com/@NoBoilerplate")[#text(fill: black)[No Boilerplate]] for the introduction
   ]
 ]
 
 #align(bottom)[
   Made with #text(fill: rgb("#b19cd9"))[#emoji.heart.purple] using
-  - #link("https://typst.app/")[Typst]
-  - #link("https://touying-typ.github.io/")[Touying] and #link("https://github.com/spidersouris/touying-unistra-pristine")[Unistra Pristine Theme]
-  - #link("https://www.jetbrains.com/lp/mono/")[JetBrains Mono] and #link("https://fonts.google.com/noto/specimen/Noto+Serif")[NotoSerif]
+  - #link("https://typst.app/")[#text(fill: black)[#image("typst.svg", alt: "Typst", height: 1em)]]
+  - #box[#link("https://touying-typ.github.io/")[#text(fill: black)[#image("touying.png",alt: "Touying", height: 1em)]]] and #link("https://github.com/spidersouris/touying-unistra-pristine")[#text(fill: black)[Unistra Pristine Theme]]
+  - #link("https://www.jetbrains.com/lp/mono/")[#text(fill: black, font: "Jetbrains Mono")[JetBrains Mono]] and #link("https://fonts.google.com/noto/specimen/Noto+Serif")[#text(fill: black, font: "NotoSerif NF")[NotoSerif]]
 ]
