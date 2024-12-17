@@ -11,7 +11,8 @@
 
 This is my introduction video for Aalto University's Game Design and Development program.
 
-And today's date is December 17th, 2024.
+// And today's date is #datetime(year: 2024, month: 12, day: 15).display("[month repr:long] [day], [year repr:full]").
+And today's date is #datetime.today().display("[month repr:long] [day]th, [year repr:full]").
 
 #next-slide()
 
