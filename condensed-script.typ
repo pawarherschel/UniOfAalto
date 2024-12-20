@@ -7,20 +7,23 @@
   ]
 ]
 
+#let slow-down-hint(content) = highlight[#content]
+
+#set page(margin: (left: 15em, right: 15em))
+
 #next-slide()[Title Slide]
 
 This is my introduction video for Aalto University's Game Design and Development program.
 
-// And today's date is #datetime(year: 2024, month: 12, day: 15).display("[month repr:long] [day], [year repr:full]").
-Today's date is #datetime.today().display("[month repr:long] [day]th, [year repr:full]").
-
 #next-slide()[Self Introduction]
 
-Heya, my name is Herschel Pravin Pawar. This video has been recorded as part of deliverables for the admission process. Everything you see in this video—scripts, links, and images—are a part of a Typst document available freely on GitHub under a public domain licence.
+Heya, my name is Herschel Pravin Pawar. This video has been recorded #slow-down-hint[as part of] deliverables for the admission process. Everything you see in this video—scripts, links, and images—are a part of a Typst document available freely on GitHub under a public domain licence.
 
 #next-slide()[Coventry University]
 
-I participated in Coventry University's summer school for game development with Unity.The summer school concluded with a game jam, and my team got 2nd position.
+#slow-down-hint[I participated in] Coventry University's Summer School for Game Development with Unity.
+
+The summer school concluded with a game jam, and these are the results.
 
 The themes were Continuous Change and 2D Platformer.
 
@@ -30,7 +33,7 @@ I'm proud that the player code I wrote was adaptable enough to be reused for the
 
 #next-slide()[Game Maker ToolKit's 2023 Game Jam]
 
-I taught myself Godot by creating small games. I participated in GMTK's 2023 Game Jam.
+I taught myself Godot by creating small games and eventually participated in GMTK's 2023 Game Jam.
 
 The theme was Roles Reversed.
 
