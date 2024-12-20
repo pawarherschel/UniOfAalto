@@ -18,7 +18,7 @@ And today's date is #datetime.today().display("[month repr:long] [day]th, [year 
 
 = Self Introduction
 
-Heya, my name is Herschel Pravin Pawar. This video has been recorded as part of deliverables for the admission process of Aalto School of Science's Game Design and Development. Everything you see in this video—scripts, links, and images—are a part of a Typst document available freely on GitHub under a public domain licence. There are clickable links to everything I mention in the video. If I'm missing any, it's considered an error.
+Heya, my name is Herschel Pravin Pawar. This video has been recorded as part of deliverables for the admission process of Aalto School of Science's Game Design and Development. Everything you see in this video—scripts, links, and images—are a part of a Typst document available freely on GitHub under a public domain licence.
 
 #next-slide()
 
@@ -26,9 +26,11 @@ Heya, my name is Herschel Pravin Pawar. This video has been recorded as part of 
 
 Let's start with some highlights from my game development experience.
 
-I participated in Coventry University's summer school, where we were taught game development using Unity. As a finale, a game jam was held, and my team got 2nd place. Other than Unity, I taught myself Godot, since I love free and open source software. I created clones of small games to learn Godot. Then, I participated in GMTK's 2023 Game Jam and got an average rank of 4612th position out of over 6700 participants. Recently, I've been exploring Bevy, a game engine made in rust that uses ECS.
+I participated in Coventry University's summer school, where we were taught game development using Unity. As a finale, a game jam was held, and my team got 2nd place.
 
-Lemme tell you more about the game development projects.
+Other than Unity, I taught myself Godot. I created clones of small games to learn Godot. Then, I participated in GMTK's 2023 Game Jam and got an average rank of 4612th position out of over 6700 participants.
+
+Recently, I've been exploring Bevy, a game engine made in rust that uses ECS.
 
 #next-slide()
 
