@@ -1,83 +1,70 @@
 #let slide = counter("slide")
 
-#let next-slide() = [
+#let next-slide(content) = [
   #slide.step()
   #rect(width: 100%, height: 3em)[
-    #align(horizon + center)[/ slide: #context slide.display()]
+    #align(horizon + center)[/ slide: #context slide.display() | #content]
   ]
 ]
 
-#next-slide()
+#next-slide()[Title Slide]
 
 This is my introduction video for Aalto University's Game Design and Development program.
 
 // And today's date is #datetime(year: 2024, month: 12, day: 15).display("[month repr:long] [day], [year repr:full]").
 Today's date is #datetime.today().display("[month repr:long] [day]th, [year repr:full]").
 
-#next-slide()
+#next-slide()[Self Introduction]
 
-= Self Introduction
+Heya, my name is Herschel Pravin Pawar. This video has been recorded as part of deliverables for the admission process. Everything you see in this video—scripts, links, and images—are a part of a Typst document available freely on GitHub under a public domain licence.
 
-Heya, my name is Herschel Pravin Pawar. This video has been recorded as part of deliverables for the admission process of Aalto School of Science's Game Design and Development. Everything you see in this video—scripts, links, and images—are a part of a Typst document available freely on GitHub under a public domain licence.
+#next-slide()[Coventry University]
 
-#next-slide()
+I participated in Coventry University's summer school for game development with Unity.The summer school concluded with a game jam, and my team got 2nd position.
 
-= Coventry University
+The themes were Continuous Change and 2D Platformer.
 
-I participated in Coventry University's summer school on game development with Unity, where my team placed 2nd in a game jam. The themes were Continuous Change and 2D Platformer.
+We created Fractured Elements, featuring a player with cycling elemental powers. I focused on making the gameplay while my partner focused on the creative aspects of the game.
 
-We created Fractured Elements, featuring a player with cycling elemental powers and weapons due to their lack of control. My teammate handled level design, art, sound, and lore, while I focused on coding.
+I'm proud that the player code I wrote was adaptable enough to be reused for the final boss and the high-level code was generic over weapons and elemental powers.
 
-I'm proud that the player code I wrote was adaptable enough to be reused for the final boss. I also designed the high-level code to be generic over weapons and elemental powers.
+#next-slide()[Game Maker ToolKit's 2023 Game Jam]
 
-#next-slide()
+I taught myself Godot by creating small games. I participated in GMTK's 2023 Game Jam.
 
-= Game Maker ToolKit's 2023 Game Jam
+The theme was Roles Reversed.
 
-Other than Unity, I taught myself Godot by creating clones of small games. I participated in GMTK's 2023 Game Jam, ranking around 4600th position out of 6700+ participants.
+I designed a twist on Space Invaders: instead of killing aliens, the player controls a group of aliens fighting to survive against heroes.
 
-The theme was Roles Reversed, and I designed a twist on Space Invaders: instead of killing aliens, the player controls a group of aliens fighting to survive against heroes.
+The main game mechanic involved a random alien firing while space bar was pressed. This made it so the player had to choose between having predictability and having more health.
 
-To make the gameplay unique, shooting mechanics involved a random alien firing while space bar was pressed. The players had to choose their trade off; More aliens meant more health but less predictability. Losing too many aliens increased the challenge, preventing indefinite gameplay.
-
-#next-slide()
-
-= Bevy
+#next-slide()[Bevy]
 
 Recently, I've been learning Bevy, a Rust-based ECS game engine.
 
-So far, I've followed a tutorial to make a Space Invaders clone and later remade Pong. Currently, I'm rewriting Pong with online multiplayer in mind to learn networking structures.
+So far, I've remade pong without using any tutorials. Currently, I'm using the pong codebase to learn how to make online multiplayer games.
 
-My goal is to apply this experience to create an online chess game.
+#next-slide()[Other]
 
-#next-slide()
+Some other projects I've worked on include VRCX Insights which involves data mining. It extracts friend circles by using data points of entering and leaving a room.
 
-= Other
+Another project is Booth Archiver, which compiles your Booth wish list into a simple, user-friendly Excel spreadsheet.
 
-I've done data minig in my project VRCX Insights, it's cpu only right now but I'm learning WGPU to make it run on the GPU.
+I've also created Krita Palette Generator, a tool that quantizes an image and generates a palette from it.
 
-Another project is Booth Archiver which is a web scaper for a japanese market place. The prototype was made using Power Automate, then moved it to Python, and now its in Rust.
+Other than programming, I also taught myself how to use Photoshop to create textures for my OC --- Kait.
 
-I've also created a tool which takes an image and creates a color palette out of it.
+#next-slide()[Current Interests]
 
-Other than programming, I also taught myself how to use Photoshop. I created textures for my OC --- Kait.
+In no specific order these are some of the topics im interested in learning, you can pause the video to read about them in more detail:
 
-#next-slide()
+- WGPU --- an implementation of WebGPU spec in rust --- to offload work to the gpu
+- Cranelift --- an alternative to LLVM --- creating custom scripting languages for game engines
+- Stateless Abstractions --- Inspired by NixOS, functional programming, WGPU --- Creating good abstractions which reduce conginitive load
+- Technical art --- bridging programming, art, and mathematics --- I am facinated by gpus and shaders
+- GPGPU --- Hardware Acceleration --- Offloading tasks and doing them in parallel
+- Giving technical talks --- Inspiring Others --- Kate Compton inspired me, and I want to inspire others, just like her
 
-= Interests
+#next-slide()[Why Aalto]
 
-I'm currently interested in learning WGPU --- an implementation of WebGPU spec in rust, Cranelift --- an alternative to LLVM, open source hardware --- see PineTime.
-
-I participate in the local rust meetups and queer meetups.
-
-I always try my best to create a friendly atmosphere and help others.
-
-#next-slide()
-
-= Why Aalto
-
-The multidisciplinary and project-based approach deeply resonates with me.
-
-For me, the program at Aalto represents more than just a chance to further my technical skills. It is an opportunity to grow alongside other people who see the world differently.
-
-I believe that the future of innovation relies on collaboration across disciplines, and Aalto provides the ideal space to explore and exchange ideas.
+I actively participate in local Rust and queer meetups, always striving to create a welcoming atmosphere and support others. This collaborative spirit is something I value deeply and is one of the main reasons that the multidisciplinary, project-based approach at Aalto resonates with me. I believe that innovation thrives when people from diverse backgrounds come together, and Aalto's environment offers the perfect space to exchange ideas and grow, both technically and personally.
