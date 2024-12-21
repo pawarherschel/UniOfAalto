@@ -262,7 +262,7 @@
 
 #block(height: 1fr, width: 100%)[
   #figure(
-    image("cropped-direct.jpg", height: 1fr, fit: "contain"),
+    image("cropped-direct-preview.png", height: 1fr, fit: "contain"),
     caption: [A _VERY_ zoomed out view of the graph produced],
   )
 ]
