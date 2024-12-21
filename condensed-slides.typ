@@ -361,7 +361,8 @@
   #text[
     - #alert[fivepb] for helping me push through when I wasn't able to
     - #alert[mlembug] for going through the script
-    - #alert[Shashank] and #alert[Divyesh] for checking the presentation
+    - #alert[Shashank] for checking the presentation
+    - #alert[Divyesh] for checking the script, presentation, and video
     - #alert[Henna] for helping me practice and pushing me towards getting higher education
     - and many many many other people
   ]
