@@ -23,7 +23,7 @@
 #show: metropolis-theme.with(
   aspect-ratio: "16-9",
   navigation: none,
-  footer-right: none,
+  // footer-right: none,
   config-info(
     title: [Introduction Video],
     subtitle: [University of Aalto],
@@ -72,10 +72,6 @@
 
 #title-slide()
 
-= Outline <touying:hidden>
-
-#outline(title: none, indent: 1em, depth: 2)
-
 = Self Introduction
 
 == Who am I?
@@ -96,9 +92,7 @@
         align(left + horizon)[
           #alert[Herschel Pravin Pawar]
           #linebreak()
-          #link("https://sakurakat.systems")[
-            #text(size: 0.8em)[sakurakat.systems]
-          ]
+          #text(font: "Noto Serif", size: 0.8em)[#link("https://sakurakat.systems")[sakurakat.systems] <links>]
         ],
       )
     ]
@@ -111,14 +105,16 @@
           align: left + horizon,
           column-gutter: 2%,
           image("cc.logo.svg", height: 1em),
-          link("https://github.com/pawarherschel/UniOfAalto")[GitHub:pawarherschel/UniOfAalto],
+          [#link("https://github.com/pawarherschel/UniOfAalto")[GitHub:pawarherschel/UniOfAalto] <links>],
         )
       ]
     ]
   ],
 )
 
-= Coventry University
+= #[#link("https://github.com/pawarherschel/CovUniGJ2024")[Coventry University Summer School Game Jam] <links>]
+
+#text(font: "Noto Serif")[#link("https://pawarherschel.itch.io/fractured-elements")[#alert[Fractured Elements]] <links>]
 
 == Result
 
@@ -134,7 +130,7 @@
         [Creativity], [3], [2.739], [3.000],
         [Enjoyment], [3], [2.921], [3.200],
       ),
-      caption: "Coventry University Game Jam Results",
+      caption: [#link("https://itch.io/jam/summer-school-24/rate/2856755")[Coventry University Game Jam Results] <links>],
     )
   ]
 ]
@@ -187,7 +183,9 @@
   )
 ]
 
-= Game Maker ToolKit's 2023 Game Jam
+= #[#link("https://github.com/pawarherschel/GMTK2023")[Game Maker ToolKit's 2023 Game Jam] <links>]
+
+#text(font: "Noto Serif")[#link("https://pawarherschel.itch.io/cosmos-conquerors")[#alert[Cosmos Conquerors]] <links>]
 
 == Result
 
@@ -203,7 +201,7 @@
         [Presentation], [4720], [2.237], [2.583],
         [Creativity], [4780], [2.382], [2.750],
       ),
-      caption: "GMTK's 2023 Game Jam Results",
+      caption: [#link("https://itch.io/jam/gmtk-2023/rate/2155150")[GMTK's 2023 Game Jam Results] <links>],
     )
   ]
 ]
@@ -252,13 +250,15 @@
   )
 ]
 
-= Bevy
+= #[#link("https://bevyengine.org/")[Bevy] <links>]
+
+#text(font: "Noto Serif")[#link("https://github.com/pawarherschel/bevy-pong")[#alert[Pong]] <links>]
 
 #blank-slide
 
 = Other Projects
 
-== VRCX Insights
+== #text(font: "Noto Serif")[#link("https://github.com/pawarherschel/vrcx-insights")[VRCX Insights] <links>]
 
 #block(height: 1fr, width: 100%)[
   #figure(
@@ -276,7 +276,7 @@
 
   size of svg: #alert[$ 33.7 "MB" (35,402,018 "bytes") $]
 
-  png output code:
+  png output code (using #alert[typst]):
   #align(center)[
     #rect(stroke: alert-secondary-color)[
       ```typst
@@ -290,7 +290,7 @@
   size of png produced: #alert[$ 3.34 "GB" (3,597,062,134 "bytes") $]
 ]
 
-== Booth Archiver
+== #text(font: "Noto Serif")[#link("https://github.com/pawarherschel/booth_archiver")[Booth Archiver] <links>]
 
 #block(height: 1fr, width: 100%)[
   #figure(
@@ -299,7 +299,9 @@
   )
 ]
 
-== Krita/GIMP Palette Generator
+== #text(
+  font: "Noto Serif",
+)[#link("https://github.com/pawarherschel/krita-palette-creator")[Krita/GIMP Palette Generator] <links>]
 
 #block(height: 1fr, width: 100%)[
   #columns(2)[
@@ -325,7 +327,7 @@
   ]
 ]
 
-== Kait
+== #text(font: "Noto Serif")[Kait]
 
 #block(height: 1fr, width: 100%)[
   #figure(
@@ -334,7 +336,7 @@
       height: 1fr,
       fit: "contain",
     ),
-    caption: "OC Kait - Made with the help of VRoid Studio",
+    caption: [OC #text(font: "Noto Serif")[Kait] - Made with the help of VRoid Studio],
   )
 ]
 
@@ -342,12 +344,12 @@
 
 ---
 
-- #alert[WGPU] --- an implementation of WebGPU spec in rust --- to offload work to the gpu
-- #alert[Cranelift] --- an alternative to LLVM --- creating custom scripting languages for game engines
+- #[#link("https://wgpu.rs/")[#alert[WGPU]] <links>] --- an implementation of WebGPU spec in rust --- to offload work to the gpu
+- #[#link("https://cranelift.dev/")[#alert[Cranelift]] <links>] --- an alternative to LLVM --- creating custom scripting languages for game engines
 - #alert[Stateless Abstractions] --- Inspired by NixOS, functional programming, WGPU --- Creating good abstractions which reduce conginitive load
 - #alert[Technical art] --- bridging programming, art, and mathematics --- I am facinated by gpus and shaders
 - #alert[GPGPU] --- Hardware Acceleration --- Offloading tasks and doing them in parallel
-- #alert[Giving technical talks] --- Inspiring Others --- Kate Compton inspired me, and I want to inspire others, just like her
+- #alert[Giving technical talks] --- Inspiring Others --- #[#link("https://www.galaxykate.com/")[#alert[Kate Compton]] <links>] inspired me, and I want to inspire others, just like her (#[#link("https://www.youtube.com/watch?v=WumyfLEa6bU")[#alert[video]] <links>])
 
 = Why Aalto
 
@@ -369,15 +371,110 @@
 
 #align(horizon)[
   #text[
-    - #link("https://www.youtube.com/@Acerola_t")[#alert[Acerola]] for the general vibes of the presentation
-    - #link("https://www.youtube.com/@NoBoilerplate")[#alert[No Boilerplate]] for the introduction
+    - #[#link("https://www.youtube.com/@Acerola_t")[#alert[Acerola]] <links>] for the general vibes of the presentation
+    - #[#link("https://www.youtube.com/@NoBoilerplate")[#alert[No Boilerplate]] <links>] for the introduction
   ]
 ]
 
 #align(bottom)[
   Made with #text(fill: rgb("#b19cd9"))[#emoji.heart.purple] using
-  - #box[#image("typst.svg", height: 1em)] #link("https://typst.app/")[#alert[Typst]]
-  - #box[#image("touying.png", alt: "Touying", height: 1em)] #link("https://touying-typ.github.io/")[#alert[Touying]]
-  - #box[#image("catppuccin.png", height: 1em)] #link("https://catppuccin.com/")[#alert[Catppuccin Theme]]
-  - #link("https://www.jetbrains.com/lp/mono/")[#alert[#text(font: "Jetbrains Mono")[JetBrains Mono]]] and #alert[#link("https://fonts.google.com/noto/specimen/Noto+Serif")[#text(font: "NotoSerif NF")[NotoSerif]]]
+  - #box[#image("typst.svg", height: 1em)] #[#link("https://typst.app/")[#alert[Typst]] <links>] --- an alternative to LaTeX --- \/\/ sorry couldn't figure out how to do make the logo visible
+  - #box[#image("touying.png", alt: "Touying", height: 1em)] #[#link("https://touying-typ.github.io/")[#alert[Touying]] <links>] --- Slides
+  - #box[#image("catppuccin.png", height: 1em)] #[#link("https://catppuccin.com/")[#alert[Catppuccin Theme]] <links>] --- Colors
+  - #[#link("https://www.jetbrains.com/lp/mono/")[#alert[#text(font: "Jetbrains Mono")[JetBrains Mono]]] <links>] --- General font
+  - #text(
+      font: "NotoSerif NF",
+    )[#[#alert[#link("https://fonts.google.com/noto/specimen/Noto+Serif")[NotoSerif] <links>] --- Font for more "creative" aspects]]
+]
+
+#appendix[
+
+  = Appendix
+
+  == List of Images
+  #align(top + left)[
+    #context {
+      for figure in query(figure.where(kind: image)) {
+        let caption = figure.caption
+        let page = figure.location().page()
+
+        text(size: 0.9em)[- #caption #h(1fr) #link(figure.location())[#emoji.arrow.curve]]
+      }
+    }
+  ]
+
+  == List of Tables
+
+  #align(top + left)[
+    #context {
+      for figure in query(figure.where(kind: table)) {
+        let caption = figure.caption
+        let page = figure.location().page()
+
+        text(size: 0.9em)[- #caption #h(1fr) #link(figure.location())[#emoji.arrow.curve]]
+      }
+    }
+  ]
+
+  == Table of Links
+
+  #let content-to-text1 = c => if c.has("text") {
+    c.text
+  } else if c.has("children") {
+    c.children.map(child => content-to-text0(child))
+  } else if c.has("styled") {
+    content-to-text0(c.child)
+  }
+
+  #let content-to-text0 = c => if c.has("text") {
+    c.text
+  } else if c.has("children") {
+    c.children.map(child => content-to-text1(child)).join("")
+  } else if c.has("child") {
+    content-to-text1(c.child)
+  }
+
+  #let content-to-text = content-to-text0
+
+  #align(top + left)[
+    #context {
+      let q = query(<links>)
+      let bodies = q.map(l => {
+        if not l.has("body") {
+          text(stroke: red, size: 30pt)[SOMETHING HAS WENT WRONG!!!!! --- #l]
+        } else {
+          content-to-text(l.body)
+        }
+      })
+      let hyperlinks = q.map(l => {
+        if not l.has("dest") {
+          text(stroke: red, size: 30pt)[SOMETHING HAS WENT WRONG!!!!! --- #l]
+        } else {
+          l.dest
+        }
+      })
+      let pages = q.map(l => l.location())
+
+      let elems = bodies
+        .zip(hyperlinks)
+        .zip(pages)
+        .map(e => {
+          let ((a, b), c) = e
+
+          (a, b, c)
+        })
+
+      show table.cell: box
+      show table.cell: set box(inset: 5pt)
+      show table.cell: set align(left + horizon)
+
+      table(
+        columns: 3,
+        table.header(repeat: true, [pg#linebreak()no], [Accompanying Text], [Link Destination]),
+        ..for (idx, (a, b, c)) in elems.enumerate() {
+          ([#link(c)[#emoji.arrow.curve]], [#a], [#link(b)])
+        },
+      )
+    }
+  ]
 ]
