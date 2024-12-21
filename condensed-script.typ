@@ -47,7 +47,7 @@ Recently, I've been learning Bevy, a Rust-based ECS game engine.
 
 So far, I've remade pong without using any tutorials. Currently, I'm using the pong codebase to learn how to make online multiplayer games.
 
-#next-slide()[Other]
+#next-slide()[Other Projects]
 
 Some other projects I've worked on include VRCX Insights which involves data mining. It extracts friend circles by using data points of entering and leaving a room.
 
@@ -61,12 +61,12 @@ Other than programming, I also taught myself how to use Photoshop to create text
 
 In no specific order these are some of the topics im interested in learning, you can pause the video to read about them in more detail:
 
-- WGPU --- an implementation of WebGPU spec in rust --- to offload work to the gpu
-- Cranelift --- an alternative to LLVM --- creating custom scripting languages for game engines
-- Stateless Abstractions --- Inspired by NixOS, functional programming, WGPU --- Creating good abstractions which reduce conginitive load
-- Technical art --- bridging programming, art, and mathematics --- I am facinated by gpus and shaders
-- GPGPU --- Hardware Acceleration --- Offloading tasks and doing them in parallel
-- Giving technical talks --- Inspiring Others --- Kate Compton inspired me, and I want to inspire others, just like her
+- WGPU
+- Cranelift
+- Stateless Abstractions
+- Technical art
+- GPGPU
+- Giving technical talks
 
 #next-slide()[Why Aalto]
 
