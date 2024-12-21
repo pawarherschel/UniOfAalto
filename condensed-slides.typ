@@ -376,11 +376,38 @@
   ]
 ]
 
+#let catppuccin-gradient = gradient.linear(
+  rgb(245, 224, 220),
+  rgb(242, 205, 205),
+  rgb(245, 194, 231),
+  rgb(203, 166, 247),
+  rgb(243, 139, 168),
+  rgb(235, 160, 172),
+  rgb(250, 179, 135),
+  rgb(249, 226, 175),
+  rgb(166, 227, 161),
+  rgb(148, 226, 213),
+  rgb(137, 220, 235),
+  rgb(116, 199, 236),
+  rgb(137, 180, 250),
+  rgb(180, 190, 254),
+)
+
 #align(bottom)[
   Made with #text(fill: rgb("#b19cd9"))[#emoji.heart.purple] using
   - #box[#image("typst.svg", height: 1em)] #[#link("https://typst.app/")[#alert[Typst]] <links>] --- an alternative to LaTeX --- \/\/ sorry couldn't figure out how to do make the logo visible
   - #box[#image("touying.png", alt: "Touying", height: 1em)] #[#link("https://touying-typ.github.io/")[#alert[Touying]] <links>] --- Slides
-  - #box[#image("catppuccin.png", height: 1em)] #[#link("https://catppuccin.com/")[#alert[Catppuccin Theme]] <links>] --- Colors
+  - #box[#image("catppuccin.png", height: 1em)] #text(fill: catppuccin-gradient)[
+      #[#link("https://catppuccin.com/")[Catppuccin Theme] <links>] --- Colors
+      #box(width: 1fr)[
+        #rect(
+          height: 1em,
+          stroke: none,
+          fill: catppuccin-gradient,
+          width: 100%,
+        )
+      ]
+    ]
   - #[#link("https://www.jetbrains.com/lp/mono/")[#alert[#text(font: "Jetbrains Mono")[JetBrains Mono]]] <links>] --- General font
   - #text(
       font: "NotoSerif NF",
