@@ -15,6 +15,7 @@
 | GIMP/Krita Palette Creator                           | https://github.com/pawarherschel/krita-palette-creator                                                         |
 | Color quantization/Rust                              | https://rosettacode.org/wiki/Color_quantization#Rust                                                           |
 | WGPU                                                 | https://wgpu.rs/                                                                                               |
+| NixOS                                                | https://nixos.org/                                                                                             |
 | Cranelift                                            | https://cranelift.dev/                                                                                         |
 | Kate Compton                                         | https://www.galaxykate.com/                                                                                    |
 | viridianmasquerade                                   | https://viridianmasquerade.tumblr.com/                                                                         |
