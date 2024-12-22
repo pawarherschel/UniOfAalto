@@ -21,7 +21,7 @@
 #let neutral-darkest = text-color
 
 #show: metropolis-theme.with(
-  aspect-ratio: "2525-1380",
+  aspect-ratio: "16-9",
   navigation: none,
   // footer-right: none,
   config-info(
