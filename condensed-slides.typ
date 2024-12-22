@@ -81,7 +81,9 @@
 
 #title-slide()
 
-#outline(title: "Outline")
+= \= Outline <touying:hidden>
+
+#outline(title: none)
 
 = Self Introduction
 
