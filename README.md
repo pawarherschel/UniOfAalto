@@ -1,4 +1,4 @@
-![first slide of the presenatation](slides.png)
+![first slide of the presenatation](condensed-slides.png)
 
 | text                                                 | link                                                                                                           |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
