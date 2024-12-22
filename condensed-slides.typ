@@ -26,13 +26,22 @@
   // footer-right: none,
   config-info(
     title: [Introduction Video],
-    subtitle: [University of Aalto],
+    subtitle: [
+      University of Aalto
+
+      #text(size: 0.8em)[
+        #par(justify: true)[
+          #alert[Context:]
+          - Text #underline(stroke: (paint: alert-secondary-color, dash: "densely-dashed"))[underlined with dashes] are links
+          - Acknowledgements at the end of the presentation
+          - Text using #text(font: "Noto Serif")[Noto Serif] are supposed to be "#text(font: "Noto Serif")[creative]" elements
+          - List of tables, images, and links are in the Appendix at the end.
+            - Download the presentation from #[#link("https://github.com/pawarherschel/UniOfAalto/blob/main/condensed-slides.pdf")[Link to slides: GitHub:pawarherschel/UniOfAalto:condensed-slides.pdf] <links>] to view them.
+        ]
+      ]
+    ],
     author: [Herschel Pravin Pawar],
-    date: datetime(
-      year: 2024,
-      month: 12,
-      day: 21,
-    ).display("[month repr:long] [day], [year repr:full]"),
+    date: datetime.today().display("[month repr:long] [day], [year repr:full]"),
   ),
   config-colors(
     primary: primary,
@@ -59,7 +68,7 @@
 
 #let blank-slide = focus-slide[
   #text(
-    font: "NotoSerif NF",
+    font: "Noto Serif",
     style: "italic",
     weight: "light",
     stretch: 70%,
@@ -71,6 +80,8 @@
 ]
 
 #title-slide()
+
+#outline(title: "Outline")
 
 = Self Introduction
 
@@ -132,6 +143,21 @@
       ),
       caption: [#link("https://itch.io/jam/summer-school-24/rate/2856755")[Coventry University Game Jam Results] <links>],
     )
+
+    #align(left)[
+      #rect(stroke: alert-secondary-color)[
+        #box(inset: 2%)[
+          #par(justify: true)[
+            #text(size: 0.8em)[
+              Judge Feedback:
+              ```
+              Visually nice platformer game with a pixel art approach and switching characters that allow either melee or ranged attacks. Multiple levels make it interesting and force the player to master their jumping and attacking skills. There is a final boss for the finale. One improvement I would suggest is that I was unsure what caused me to change between the characters - I was not sure if it was timed, depending on where I was in the level or a button press. Well done to all involved in the game and the hard work you put into it!
+              ```
+            ]
+          ]
+        ]
+      ]
+    ]
   ]
 ]
 
@@ -156,21 +182,21 @@
   ]
 ]
 
-== Main Mechanic
-
-#block(height: 1fr, width: 100%)[
-  #figure(
-    image("hero switching.gif", height: 1fr, fit: "contain"),
-    caption: [Hero Switching Mechanic],
-  )
-]
-
 == The Team
 
 #block(height: 1fr, width: 100%)[
   #figure(
     image("shashank and me.jpg", height: 1fr, fit: "contain"),
     caption: [Us],
+  )
+]
+
+== Main Mechanic
+
+#block(height: 1fr, width: 100%)[
+  #figure(
+    image("hero switching.gif", height: 1fr, fit: "contain"),
+    caption: [Hero Switching Mechanic],
   )
 ]
 
@@ -206,7 +232,7 @@
   ]
 ]
 
-== Themes
+== Theme
 
 #text(
   size: 40pt,
@@ -269,7 +295,9 @@
 
 ---
 
-#text(size: 0.893em)[
+=== Output Metadata
+
+#text(size: 0.822em)[
   number of labels in the DOT file: #alert[$ 1835 "labels" $]
 
   total lines in the DOT file: #alert[$ 102,560 "lines" $]
@@ -306,12 +334,12 @@
 #block(height: 1fr, width: 100%)[
   #columns(2)[
     #figure(
-      image("env.png", width: 100%, fit: "contain"),
+      image("env-preview.png", width: 100%, fit: "contain"),
       caption: "Original Image",
     )
     #colbreak()
     #figure(
-      image("env.png.5.png", width: 100%, fit: "contain"),
+      image("env.png.5-preview.png", width: 100%, fit: "contain"),
       caption: "Quantized Image",
     )
   ]
@@ -340,20 +368,21 @@
   )
 ]
 
-= Current Interests
+= \= Current Interests <touying:hidden>
 
----
-
-- #[#link("https://wgpu.rs/")[#alert[WGPU]] <links>] --- an implementation of WebGPU spec in rust --- to offload work to the gpu
-- #[#link("https://cranelift.dev/")[#alert[Cranelift]] <links>] --- an alternative to LLVM --- creating custom scripting languages for game engines
-- #alert[Stateless Abstractions] --- Inspired by NixOS, functional programming, WGPU --- Creating good abstractions which reduce conginitive load
-- #alert[Technical art] --- bridging programming, art, and mathematics --- I am facinated by gpus and shaders
-- #alert[GPGPU] --- Hardware Acceleration --- Offloading tasks and doing them in parallel
-- #alert[Giving technical talks] --- Inspiring Others --- #[#link("https://www.galaxykate.com/")[#alert[Kate Compton]] <links>] inspired me, and I want to inspire others, just like her (#[#link("https://www.youtube.com/watch?v=WumyfLEa6bU")[#alert[video]] <links>])
+#par(justify: true)[
+  - #[#link("https://wgpu.rs/")[#alert[WGPU]] <links>] --- an implementation of WebGPU spec in rust --- to offload work to the gpu
+  - #[#link("https://cranelift.dev/")[#alert[Cranelift]] <links>] --- an alternative to LLVM --- creating custom scripting languages for game engines
+  - #alert[Stateless Abstractions] --- Inspired by #[#link("https://nixos.org/")[#alert[NixOS]]<links>], functional programming, #[#link("https://wgpu.rs/")[#alert[WGPU]] <links>] --- Creating good abstractions which reduce conginitive load
+  - #alert[Technical art] --- bridging programming, art, and mathematics --- I am facinated by gpus and shaders
+  - #alert[GPGPU] --- Hardware Acceleration --- Offloading tasks and doing them in parallel
+  - #alert[Giving technical talks] --- Inspiring Others --- #[#link("https://www.galaxykate.com/")[#alert[Kate Compton]] <links>] inspired me, and I want to inspire others, just like her (#[#link("https://www.youtube.com/watch?v=WumyfLEa6bU")[#alert[video]]<links>])
+]
 
 = Why Aalto
+#text(size: 0.8em)[#text(fill: white)[and also acknowledgements]]
 
-= Acknowledgement
+= \= Acknowledgement <touying:hidden>
 
 ---
 
@@ -411,13 +440,16 @@
     ]
   - #[#link("https://www.jetbrains.com/lp/mono/")[#alert[#text(font: "Jetbrains Mono")[JetBrains Mono]]] <links>] --- General font
   - #text(
-      font: "NotoSerif NF",
-    )[#[#alert[#link("https://fonts.google.com/noto/specimen/Noto+Serif")[NotoSerif] <links>] --- Font for more "creative" aspects]]
+      font: "Noto Serif",
+    )[#[#alert[#link("https://fonts.google.com/noto/specimen/Noto+Serif")[Noto Serif] <links>] --- Font for more "creative" aspects]]
 ]
 
 #appendix[
-
   = Appendix
+
+  #focus-slide()[
+    *The page numbers refer to the _PDF_ page numbers and not the Slide page numbers*
+  ]
 
   == List of Images
   #align(top + left)[
@@ -426,7 +458,7 @@
         let caption = figure.caption
         let page = figure.location().page()
 
-        text(size: 0.9em)[- #caption #h(1fr) #link(figure.location())[#emoji.arrow.curve]]
+        text(size: 0.9em)[- #caption #h(1fr) #link(figure.location())[#page]]
       }
     }
   ]
@@ -439,7 +471,7 @@
         let caption = figure.caption
         let page = figure.location().page()
 
-        text(size: 0.9em)[- #caption #h(1fr) #link(figure.location())[#emoji.arrow.curve]]
+        text(size: 0.9em)[- #caption #h(1fr) #link(figure.location())[#page]]
       }
     }
   ]
@@ -500,7 +532,7 @@
         columns: 3,
         table.header(repeat: true, [pg#linebreak()no], [Accompanying Text], [Link Destination]),
         ..for (idx, (a, b, c)) in elems.enumerate() {
-          ([#link(c)[#emoji.arrow.curve]], [#a], [#link(b)])
+          ([#link(c)[#c.page()]], [#a], [#link(b)])
         },
       )
     }
