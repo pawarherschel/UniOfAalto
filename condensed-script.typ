@@ -1,139 +1,289 @@
 #let slide = counter("slide")
 
 #let next-slide(content) = [
+
   #rect(width: 100%, height: 3em)[
+
     #align(horizon + center)[/ slide: #context slide.display() | #[#content]]
+
   ]
+
   #slide.step()
+
 ]
 
-#let slow-down-hint(content) = {
-  [---\/ #highlight[#content] \/---]
-}
+#let slow-down-hint(content) = [
+
+  ---\/ #highlight[#content] \/---
+
+]
+
+#let breath = [|#box(width: 1fr)[#repeat[---]]#{[BREATH]}#box(width: 1fr)[#repeat[---]]|]
 
 OUTLINE:
+
 #context {
   for slide in query(<slides>) {
     let page = slide.location()
+
     let title = slide.children.at(1).at("body").children.at(1).body.description.children.last()
+
     [+ #title #box(width: 1fr)[#repeat()[---]] #link(page)[#page.page()]]
   }
 }
 
-text written like #slow-down-hint[this] is hard for me to speak fast and needs to be spoken slower
+text written like #slow-down-hint[this] is hard for me to speak fast
+
+and
+
+needs to be spoken slower
 
 #set page(margin: (left: 15em, right: 15em))
 
-#next-slide()[Title Slide]<slides>
+#next-slide[Title Slide]<slides>
 
-This is my introduction video for #slow-down-hint[Aalto University's Game Design and Development program].
+This is my introduction video for Aalto University's Game Design
 
-I'm going to talk fast, so you might need to pause the video to read the contents of the slide.
+and
 
-#next-slide()[Self Introduction]<slides>
+#slow-down-hint[Development] program.
 
----
+I'm going to talk fast,
 
-#next-slide()[Who am I?]<slides>
+so you might need to pause
 
-Heya, my name is Herschel Pravin Pawar. This video has been recorded as part of #slow-down-hint[deliverables] for the admission process. Everything you see in this video -- scripts, links, and images -- are a part of a Typst document available freely on GitHub under a public domain licence.
+and
 
-#next-slide()[Coventry University]<slides>
+read the slides.
 
-I participated in #slow-down-hint[Coventry University's Summer School for Game Development with Unity].
+#next-slide[Self Introduction]<slides>
 
-#next-slide()[Result]<slides>
+#breath
 
-The summer school concluded with a game jam, and these are the results.
+#next-slide[Who am I?]<slides>
 
-#next-slide()[Themes]<slides>
+Heya,
+
+my name is Herschel Pravin Pawar.
+
+This video is part of my Aalto application.
+
+Everything you see in this video
+
+--
+
+scripts,
+
+links,
+
+and
+
+images
+
+--
+
+are a part of a Typst document available freely on GitHub under a public domain licence.
+
+#next-slide[Coventry University]<slides>
+
+I participated in
+
+#slow-down-hint[
+  Summer School for Game Development
+].
+
+#next-slide[Result]<slides>
+
+We wrapped up with a game jam,
+
+and these are the results.
+
+#next-slide[Themes]<slides>
 
 The themes were #slow-down-hint[Continuous Change] and #slow-down-hint[2D Platformer].
 
-#next-slide()[The Team]<slides>
+#next-slide[The Team]<slides>
 
-We created #slow-down-hint[Fractured Elements], featuring a player with cycling elemental powers.
+We created #slow-down-hint[Fractured Elements],
 
-#next-slide()[Main Mechanic]<slides>
+featuring a player with cycling #slow-down-hint[elemental] powers
+
+#next-slide[Main Mechanic]<slides>
 
 I focused on making the gameplay while my partner focused on the creative aspects of the game.
 
-#next-slide()[Player Architecture]<slides>
+#next-slide[Player Architecture]<slides>
 
-I'm proud that the player code I wrote was adaptable enough to be reused for the final boss and the high-level code was generic over weapons and elemental powers.
+I'm proud that the player code I wrote was adaptable enough to be reused for the final boss
 
-#next-slide()[Game Maker ToolKit's 2023 Game Jam]<slides>
+and the high-level code was #slow-down-hint[generic] over weapons
 
-I taught myself Godot by creating small games and eventually participated in GMTK's 2023 Game Jam.
+and
 
-#next-slide()[Result]<slides>
+#slow-down-hint[elemental powers].
+
+#breath
+
+#next-slide[Game Maker ToolKit's 2023 Game Jam]<slides>
+
+I taught myself Godot by creating small games
+
+and
+
+eventually participated in a game jam.
+
+#next-slide[Result]<slides>
 
 These were the results.
-There were over six thousand seven hundred submissions.
 
-#next-slide()[Theme]<slides>
+There were over #slow-down-hint[six thousand seven hundred] submissions.
 
-The theme was Roles Reversed.
+#next-slide[Theme]<slides>
 
-#next-slide()[Gameplay]<slides>
+The theme was #slow-down-hint[Roles Reversed].
 
-I designed a twist on Space Invaders: instead of killing aliens, the player controls a group of aliens fighting to survive against heroes.
+#next-slide[Gameplay]<slides>
 
-#next-slide()[Main Mechanic]<slides>
+In the game,
 
-The main game mechanic involved a random alien firing while space bar was pressed. This made it so the player had to choose between having predictability and having more health.
+players control aliens
 
-#next-slide()[Bevy]<slides>
+fighting to survive
 
-Recently, I've been learning Bevy, a Rust-based ECS game engine.
+against heros.
 
-#next-slide()[EMPTY SLIDE]<slides>
+#next-slide[Main Mechanic]<slides>
 
-So far, I've remade pong without using any tutorials. Currently, I'm using the pong codebase to learn how to make online multiplayer games.
+A random alien fired
 
-#next-slide()[Other Projects]<slides>
+while space bar was pressed
 
----
+This required the player to choose between
 
-#next-slide()[VRCX Insights]<slides>
+having #slow-down-hint[predictability]
 
-Some other projects I've worked on include VRCX Insights which involves data mining. It extracts friend circles by using data points of entering and leaving a room.
+or
 
-#next-slide()[Output Metadata]<slides>
+having more health.
 
-Heres some information about the output produced.
+#next-slide[Bevy]<slides>
 
-#next-slide()[Booth Archiver]<slides>
+Recently,
 
-Another project is Booth Archiver, which compiles your Booth wish list into a simple, user-friendly Excel spreadsheet.
+I've been learning Bevy,
 
-#next-slide()[Krita/GIMP Palette Generator]<slides>
+a #slow-down-hint[Rust-based] #slow-down-hint[ECS] #slow-down-hint[game engine].
 
-I've also created a palette generator that quantizes an image and generates a palette from it.
+#next-slide[EMPTY SLIDE]<slides>
 
-#next-slide()[Kait]<slides>
+So far,
 
-Other than programming, I also taught myself how to use Photoshop to create textures for my OC --- Kait.
+I've remade pong.
 
-#next-slide()[Current Interests]<slides>
+Currently,
 
-In no specific order these are some of the topics im interested in learning, you can pause the video to read about them in more detail:
+I'm using the codebase to learn
 
-- WGPU
-- Cranelift
-- Stateless Abstractions
-- Technical art
-- GPGPU
-- Giving technical talks
+how to make online multiplayer games.
 
-#next-slide()[Why Aalto]<slides>
+#next-slide[Other Projects]<slides>
 
-I actively participate in local Rust and queer meetups, always striving to create a welcoming atmosphere and support others.
+Some other projects include:
 
-#next-slide()[Acknowledgement]<slides>
+#next-slide[VRCX Insights]<slides>
 
-This collaborative spirit is something I value deeply and is one of the main reasons that the multidisciplinary, project-based approach at Aalto resonates with me.
+VRCX Insights
 
-#next-slide()[Heavily Inspired by]<slides>
+A #slow-down-hint[data mining] tool to extract friend circles
 
-I believe that innovation thrives when people from diverse backgrounds come together, and Aalto's environment offers the perfect space to exchange ideas and grow, both technically and personally.
+by co-relating
+
+people being in the same room
+
+#next-slide[Output Metadata]<slides>
+
+Here,
+
+you can see
+
+why I had to zoom out the image so much
+
+#next-slide[Booth Archiver]<slides>
+
+Another project is Booth Archiver,
+
+which compiles your Booth wish list
+
+into a spreadsheet.
+
+#next-slide[Krita/GIMP Palette Generator]<slides>
+
+I've also created a tool that quantizes an image
+
+and
+
+generates a palette from it.
+
+#next-slide[Kait]<slides>
+
+The textures for my OC
+
+were made using Photoshop.
+
+#next-slide[Goals for 2024]<slides>
+
+These are some of my goals
+
+for
+
+2025
+
+#next-slide[Goal --- Short Description --- Why?]<slides>
+
+the most important being
+
+#slow-down-hint[WGPU] and #slow-down-hint[public speaking]
+
+#next-slide[Why Aalto]<slides>
+
+I'm active in #slow-down-hint[Rust]
+
+and
+
+#slow-down-hint[queer meetups],
+
+always striving to create a #slow-down-hint[welcoming atmosphere]
+
+and
+
+support others.
+
+#next-slide[Acknowledgement]<slides>
+
+This #slow-down-hint[collaborative] spirit is something I value deeply
+
+and
+
+is one of the main reasons that the #slow-down-hint[multidisciplinary],
+
+project-based approach at Aalto resonates with me.
+
+#next-slide[Heavily Inspired by]<slides>
+
+I believe that innovation #slow-down-hint[thrives] when people from #slow-down-hint[diverse backgrounds] come together,
+
+and Aalto's environment offers
+
+the perfect space
+
+to exchange ideas
+
+and
+
+grow,
+
+both technically
+
+and
+
+personally.
