@@ -21,7 +21,7 @@
 #let neutral-darkest = text-color
 
 #show: metropolis-theme.with(
-  aspect-ratio: "16-9",
+  aspect-ratio: "2525-1380",
   navigation: none,
   // footer-right: none,
   config-info(
@@ -35,8 +35,8 @@
           - Text #underline(stroke: (paint: alert-secondary-color, dash: "densely-dashed"))[underlined with dashes] are links
           - Acknowledgements at the end of the presentation
           - Text using #text(font: "Noto Serif")[Noto Serif] are supposed to be "#text(font: "Noto Serif")[creative]" elements
-          - List of tables, images, and links are in the Appendix at the end.
-            - Download the presentation from #[#link("https://github.com/pawarherschel/UniOfAalto/blob/main/condensed-slides.pdf")[Link to slides: GitHub:pawarherschel/UniOfAalto:condensed-slides.pdf] <links>] to view them.
+          - List of tables, images, and links are in the Appendix at the end
+            - Download the presentation from #[#link("https://github.com/pawarherschel/UniOfAalto/blob/main/condensed-slides.pdf")[Link to slides: GitHub:pawarherschel/UniOfAalto:condensed-slides.pdf] <links>] to view them
         ]
       ]
     ],
