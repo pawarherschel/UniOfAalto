@@ -140,7 +140,12 @@
       )
     ]
     #align(bottom)[
-      #text(size: 20pt)[
+      #text(size: 1em)[
+        #par(justify: true)[
+          #text(size: 0.695em)[
+            Everything you see in this video --- scripts, links, and images --- are a part of a Typst document available freely on GitHub under a public domain licence.
+          ]
+        ]
         #grid(
           rows: 1,
           columns: 2,

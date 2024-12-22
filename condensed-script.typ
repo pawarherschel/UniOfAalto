@@ -42,12 +42,6 @@ needs to be spoken slower
 
 #next-slide[Title Slide]<slides>
 
-This is my introduction video for Aalto University's Game Design
-
-and
-
-#slow-down-hint[Development] program.
-
 I'm going to talk fast,
 
 so you might need to pause
@@ -56,41 +50,25 @@ and
 
 read the slides.
 
-#next-slide[Self Introduction]<slides>
-
 #breath
 
-#next-slide[Who am I?]<slides>
+#next-slide[Self Introduction]<slides>
 
 Heya,
 
+#next-slide[Who am I?]<slides>
+
 my name is Herschel Pravin Pawar.
 
-This video is part of my Aalto application.
+This video has been recorded as part of my Aalto application.
 
-Everything you see in this video
+#breath
 
---
+#next-slide[Coventry University Summer School Game Jam]<slides>
 
-scripts,
+I participated in the
 
-links,
-
-and
-
-images
-
---
-
-are a part of a Typst document available freely on GitHub under a public domain licence.
-
-#next-slide[Coventry University]<slides>
-
-I participated in
-
-#slow-down-hint[
-  Summer School for Game Development
-].
+#slow-down-hint[Summer School] for #slow-down-hint[Game Development].
 
 #next-slide[Result]<slides>
 
@@ -102,6 +80,8 @@ and these are the results.
 
 The themes were #slow-down-hint[Continuous Change] and #slow-down-hint[2D Platformer].
 
+#breath
+
 #next-slide[The Team]<slides>
 
 We created #slow-down-hint[Fractured Elements],
@@ -110,11 +90,19 @@ featuring a player with cycling #slow-down-hint[elemental] powers
 
 #next-slide[Main Mechanic]<slides>
 
-I focused on making the gameplay while my partner focused on the creative aspects of the game.
+I focused on making the gameplay
+
+while my partner focused on
+
+the creative aspects of the game.
+
+#breath
 
 #next-slide[Player Architecture]<slides>
 
-I'm proud that the player code I wrote was adaptable enough to be reused for the final boss
+the player code I wrote
+
+was reused for the final boss
 
 and the high-level code was #slow-down-hint[generic] over weapons
 
@@ -126,11 +114,11 @@ and
 
 #next-slide[Game Maker ToolKit's 2023 Game Jam]<slides>
 
-I taught myself Godot by creating small games
+I taught myself Godot
 
 and
 
-eventually participated in a game jam.
+participated in a game jam.
 
 #next-slide[Result]<slides>
 
@@ -141,6 +129,8 @@ There were over #slow-down-hint[six thousand seven hundred] submissions.
 #next-slide[Theme]<slides>
 
 The theme was #slow-down-hint[Roles Reversed].
+
+#breath
 
 #next-slide[Gameplay]<slides>
 
@@ -154,17 +144,21 @@ against heros.
 
 #next-slide[Main Mechanic]<slides>
 
-A random alien fired
+A random alien fires
 
 while space bar was pressed
 
-This required the player to choose between
+This required the player
+
+to choose between
 
 having #slow-down-hint[predictability]
 
 or
 
 having more health.
+
+#breath
 
 #next-slide[Bevy]<slides>
 
@@ -180,11 +174,11 @@ So far,
 
 I've remade pong.
 
-Currently,
+I'm using the project to learn
 
-I'm using the codebase to learn
+how to make online games.
 
-how to make online multiplayer games.
+#breath
 
 #next-slide[Other Projects]<slides>
 
@@ -196,17 +190,17 @@ VRCX Insights
 
 A #slow-down-hint[data mining] tool to extract friend circles
 
-by co-relating
+by corelating
 
-people being in the same room
+people who are in the same room.
 
 #next-slide[Output Metadata]<slides>
 
-Here,
+You can see
 
-you can see
+why I had to zoom out the image so much.
 
-why I had to zoom out the image so much
+#breath
 
 #next-slide[Booth Archiver]<slides>
 
@@ -218,11 +212,13 @@ into a spreadsheet.
 
 #next-slide[Krita/GIMP Palette Generator]<slides>
 
-I've also created a tool that quantizes an image
+I also created a tool which quantizes given image
 
 and
 
 generates a palette from it.
+
+#breath
 
 #next-slide[Kait]<slides>
 
@@ -244,6 +240,8 @@ the most important being
 
 #slow-down-hint[WGPU] and #slow-down-hint[public speaking]
 
+#breath
+
 #next-slide[Why Aalto]<slides>
 
 I'm active in #slow-down-hint[Rust]
@@ -258,6 +256,8 @@ and
 
 support others.
 
+#breath
+
 #next-slide[Acknowledgement]<slides>
 
 This #slow-down-hint[collaborative] spirit is something I value deeply
@@ -268,9 +268,13 @@ is one of the main reasons that the #slow-down-hint[multidisciplinary],
 
 project-based approach at Aalto resonates with me.
 
+#breath
+
 #next-slide[Heavily Inspired by]<slides>
 
 I believe that innovation #slow-down-hint[thrives] when people from #slow-down-hint[diverse backgrounds] come together,
+
+#breath
 
 and Aalto's environment offers
 
@@ -282,7 +286,9 @@ and
 
 grow,
 
-both technically
+both
+
+technically
 
 and
 
