@@ -302,7 +302,7 @@ were made using Photoshop.
 
 Here are some of the artworks I've made
 
-#next-slide(budget: 2)[Goals for 2024]<slides>
+#next-slide(budget: 2)[Goals for 2025]<slides>
 
 These are some of my goals
 

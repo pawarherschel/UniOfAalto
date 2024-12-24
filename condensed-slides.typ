@@ -495,19 +495,23 @@
   ]
 ]
 
-= Goals for 2024
+= Goals for 2025
 
 #text(size: 0.8em)[#text(fill: white)[These are in no specific order]]
 
 == Goal --- Short Description --- Why?
 
 #par(justify: true)[
-  - #[#link("https://wgpu.rs/")[#alert[WGPU]] <links>] --- an implementation of WebGPU spec in rust --- to interact with the GPU
+  #text(
+    stroke: alert-secondary-color,
+  )[- #[#link("https://wgpu.rs/")[#alert[WGPU]] <links>] --- an implementation of WebGPU spec in rust --- to interact with the GPU]
   - #alert[GPGPU] --- Hardware Acceleration --- Offloading tasks and doing them in parallel
   - #[#link("https://cranelift.dev/")[#alert[Cranelift]] <links>] --- an alternative to LLVM --- creating custom scripting languages for game engines
   - #alert[Technical art] --- bridging programming, art, and mathematics --- I am facinated by gpus and shaders
   - #alert[Good Stateless Abstractions] --- Inspired by #[#link("https://nixos.org/")[#alert[NixOS]]<links>], functional programming, and #[#link("https://wgpu.rs/")[#alert[WGPU]] <links>] --- Creating good abstractions which reduce conginitive load
-  - #alert[Giving technical talks] --- Inspiring Others --- #[#link("https://www.galaxykate.com/")[#alert[Kate Compton]] <links>] inspired me, and I want to inspire others, just like her (#[#link("https://www.youtube.com/watch?v=WumyfLEa6bU")[#alert[video]]<links>])
+  #text(
+    stroke: alert-secondary-color,
+  )[- #alert[Giving technical talks] --- Inspiring Others --- #[#link("https://www.galaxykate.com/")[#alert[Kate Compton]] <links>] inspired me, and I want to inspire others, just like her (#[#link("https://www.youtube.com/watch?v=WumyfLEa6bU")[#alert[video]]<links>])]
 ]
 
 = Why Aalto
