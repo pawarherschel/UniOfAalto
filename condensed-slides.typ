@@ -23,12 +23,10 @@
 #show: metropolis-theme.with(
   aspect-ratio: "16-9",
   navigation: none,
-  // footer-right: none,
   config-info(
     title: [Introduction Video],
     subtitle: [
       University of Aalto
-
       #text(size: 0.8em)[
         #par(justify: true)[
           #alert[Context:]
@@ -66,7 +64,21 @@
 #set table(stroke: text-color)
 #set text(font: "JetBrains Mono")
 
-#let blank-slide = focus-slide[
+#set quote(block: true)
+#show quote: set align(center)
+#show quote: set text(font: "Noto Serif")
+#show quote: it => {
+  grid(
+    rows: 3,
+    columns: 3,
+    text(size: 3em, baseline: 0.5em)[“], [], [],
+    [], text(style: "italic")[#it.body], [],
+    [], [], text(size: 3em)[”],
+  )
+  align(right)[-- #it.attribution]
+}
+
+#let blank-slide = focus-slide(config: (freeze-slide-counter: false))[
   #text(
     font: "Noto Serif",
     style: "italic",
@@ -100,7 +112,9 @@
 
 = \= Outline <touying:hidden>
 
-#outline(title: none)
+#align(top)[
+  #outline(title: none)
+]
 
 = Self Introduction
 
@@ -400,6 +414,38 @@
   ]
 ]
 
+---
+
+#block(width: 100%, height: 1fr)[
+  #align(top)[=== Rosettacode]
+
+  #align(center)[
+    #block(height: 1fr, width: 100%)[
+      #text(size: 0.7em)[
+        #alert[Note: the funny color bar on top of the frog image is intentional.]
+      ]
+
+      #grid(
+        rows: 1,
+        columns: 2,
+        inset: 2%,
+        figure(
+          image("Quantum_frog.png", height: 1fr, fit: "contain"),
+          caption: [Original Image #filepath("Quantum_frog.png")],
+        ),
+        figure(
+          image("Quantum_frog.png.rust.4.png", height: 1fr, fit: "contain"),
+          caption: [Quantized Image #filepath("Quantum_frog.png.rust.4.png")],
+        ),
+      )
+    ]
+  ]
+
+  #align(center)[
+    Contribution available at #link("https://rosettacode.org/wiki/Color_quantization#Rust")[Color quantization/Rust]
+  ]
+]
+
 == #text(font: "Noto Serif")[Kait]
 
 #block(height: 1fr, width: 100%)[
@@ -411,6 +457,42 @@
     ),
     caption: [OC #text(font: "Noto Serif")[Kait] - Made with the help of VRoid Studio #filepath("kait.png")],
   )
+]
+
+== #text(font: "Noto Serif")[Other Creative Stuff]
+
+#block(height: 1fr, width: 100%)[
+  #text(size: 0.8em)[
+    #grid(
+      rows: 1,
+      columns: 3,
+      inset: 1%,
+      figure(
+        image(
+          "rfl.png",
+          height: 1fr,
+          fit: "contain",
+        ),
+        caption: [Fanart for the meetup "#link("lunch.rs")[Rust for Lunch]" #filepath("rfl.png")],
+      ),
+      figure(
+        image(
+          "fractured-elements-logo.png",
+          height: 1fr,
+          fit: "contain",
+        ),
+        caption: [Logo for the game "Fractured Elements" #filepath("fractured-elements-logo.png")],
+      ),
+      figure(
+        image(
+          "kibty.svg",
+          height: 1fr,
+          fit: "contain",
+        ),
+        caption: [Logo for my website #filepath("kibty.svg")],
+      ),
+    )
+  ]
 ]
 
 = Goals for 2024
@@ -474,7 +556,7 @@
 
 #align(bottom)[
   Made with #text(fill: rgb("#b19cd9"))[#emoji.heart.purple] using
-  - #box[#image("typst.svg", height: 1em)] #[#link("https://typst.app/")[#alert[Typst]] <links>] --- an alternative to LaTeX --- \/\/ sorry couldn't figure out how to do make the logo visible
+  - #box[#image("typst.svg", height: 1em)] #[#link("https://typst.app/")[#alert[Typst]] <links>] --- an alternative to LaTeX #text(size: 0.7em)[\/\/ sorry couldn't figure out how to do make the logo visible without altering it]
   - #box[#image("touying.png", alt: "Touying", height: 1em)] #[#link("https://touying-typ.github.io/")[#alert[Touying]] <links>] --- Slides
   - #box[#image("catppuccin.png", height: 1em)] #text(fill: catppuccin-gradient)[
       #[#link("https://catppuccin.com/")[Catppuccin Theme] <links>] --- Colors
@@ -504,11 +586,53 @@
 - #alert[Source of Truth for Portfolio and CV]: #[#link("https://github.com/pawarherschel/typst/blob/main/SOT.toml")<links>]
 - #alert[CV]: #[#link("https://github.com/pawarherschel/typst/blob/main/output/CV.pdf")<links>]
 
+= Ending Note
+
+== Tumblr Post
+
+#block(height: 1fr, width: 100%)[
+  #figure(
+    image("viridianmasquerade.png", height: 1fr, fit: "contain"),
+    caption: [Tumblr Post by #[
+      #link("https://viridianmasquerade.tumblr.com/")[
+          viridianmasquerade
+        ]<links>
+      ] #filepath("viridianmasquerade.png")
+    ],
+  )
+]
+
+---
+
+#align(top)[=== THE Line]
+
+#quote(
+  attribution: [
+    #[
+      #link("https://viridianmasquerade.tumblr.com/")[
+        viridianmasquerade
+      ]<links>
+    ]
+  ],
+)[
+  #link("https://viridianmasquerade.tumblr.com/post/634434560565936128/smokeinsilence-have-you-ever-noticed-you-pick-up")[
+    I am a mosaic of everyone I've ever loved, even for a heartbeat.
+  ]<links>
+]
+
+#blank-slide
+
+#align(top)[=== My Heart]
+
+#quote(attribution: [Herschel Pravin Pawar])[
+  I am the culmination of everything I've learnt
+]
+
 #show: appendix
 
 = Appendix
 
-#focus-slide()[
+#focus-slide(config: (freeze-slide-counter: false))[
   *The page numbers refer to the _PDF_ page numbers and not the Slide page numbers*
 ]
 
