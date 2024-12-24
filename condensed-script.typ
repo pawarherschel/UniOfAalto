@@ -1,15 +1,10 @@
 #let slide = counter("slide")
 
 #let next-slide(content) = [
-
   #rect(width: 100%, height: 3em)[
-
     #align(horizon + center)[/ slide: #context slide.display() | #[#content]]
-
   ]
-
   #slide.step()
-
 ]
 
 #let slow-down-hint(content) = [
@@ -18,7 +13,15 @@
 
 ]
 
-#let breath = [|#box(width: 1fr)[#repeat[---]]#{[BREATH]}#box(width: 1fr)[#repeat[---]]|]
+#let breath = [
+  |#box(width: 1fr)[
+    #repeat[---]
+  ]
+  BREATH
+  #box(width: 1fr)[
+    #repeat[---]
+  ]|
+]
 
 OUTLINE:
 
@@ -34,9 +37,7 @@ OUTLINE:
 
 text written like #slow-down-hint[this] is hard for me to speak fast
 
-and
-
-needs to be spoken slower
+and needs to be spoken slower
 
 #set page(margin: (left: 15em, right: 15em))
 
@@ -60,7 +61,9 @@ Heya,
 
 my name is Herschel Pravin Pawar.
 
-This video has been recorded as part of my Aalto application.
+This video has been recorded as part of my
+
+Aalto application.
 
 #breath
 
@@ -146,9 +149,9 @@ against heros.
 
 A random alien fires
 
-while space bar was pressed
+while space bar is pressed
 
-This required the player
+This requires the player
 
 to choose between
 
@@ -274,22 +277,14 @@ project-based approach at Aalto resonates with me.
 
 I believe that innovation #slow-down-hint[thrives] when people from #slow-down-hint[diverse backgrounds] come together,
 
-#breath
+#next-slide[End Slide]<slides>
 
-and Aalto's environment offers
+and Aalto's environment provides
 
-the perfect space
+the perfect space to exchange ideas
 
-to exchange ideas
+and grow,
 
-and
+both technically
 
-grow,
-
-both
-
-technically
-
-and
-
-personally.
+and personally.

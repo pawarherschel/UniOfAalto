@@ -493,97 +493,108 @@
     )[#[#alert[#link("https://fonts.google.com/noto/specimen/Noto+Serif")[Noto Serif] <links>] --- Font for more "creative" aspects]]
 ]
 
-#appendix[
-  = Appendix
+== End Slide
 
-  #focus-slide()[
-    *The page numbers refer to the _PDF_ page numbers and not the Slide page numbers*
-  ]
+- #alert[Repository]: #[#link("https://github.com/pawarherschel/UniOfAalto")<links>]
+- #alert[Script Source]: #[#link("https://github.com/pawarherschel/UniOfAalto/blob/main/condensed-script.typ")<links>]
+- #alert[Compiled Script]: #[#link("https://github.com/pawarherschel/UniOfAalto/blob/main/condensed-script.pdf")<links>]
+- #alert[Slides Source]: #[#link("https://github.com/pawarherschel/UniOfAalto/blob/main/condensed-slides.typ")<links>]
+- #alert[Compiled Slides]: #[#link("https://github.com/pawarherschel/UniOfAalto/blob/main/condensed-slides.pdf")<links>]
+- #alert[Portfolio Link]: #[#link("https://sakurakat.systems/portfolio/")<links>]
+- #alert[Source of Truth for Portfolio and CV]: #[#link("https://github.com/pawarherschel/typst/blob/main/SOT.toml")<links>]
+- #alert[CV]: #[#link("https://github.com/pawarherschel/typst/blob/main/output/CV.pdf")<links>]
 
-  == List of Images
-  #align(top + left)[
-    #context {
-      for figure in query(figure.where(kind: image)) {
-        let caption = figure.caption
-        let page = figure.location().page()
+#show: appendix
 
-        text(size: 0.9em)[- #caption #h(1fr) #link(figure.location())[#page]]
-      }
+= Appendix
+
+#focus-slide()[
+  *The page numbers refer to the _PDF_ page numbers and not the Slide page numbers*
+]
+
+== List of Images
+#align(top + left)[
+  #context {
+    for figure in query(figure.where(kind: image)) {
+      let caption = figure.caption
+      let page = figure.location().page()
+
+      text(size: 0.9em)[- #caption #h(1fr) #link(figure.location())[#page]]
     }
-  ]
-
-  == List of Tables
-
-  #align(top + left)[
-    #context {
-      for figure in query(figure.where(kind: table)) {
-        let caption = figure.caption
-        let page = figure.location().page()
-
-        text(size: 0.9em)[- #caption #h(1fr) #link(figure.location())[#page]]
-      }
-    }
-  ]
-
-  == Table of Links
-
-  #let content-to-text1 = c => if c.has("text") {
-    c.text
-  } else if c.has("children") {
-    c.children.map(child => content-to-text0(child))
-  } else if c.has("styled") {
-    content-to-text0(c.child)
   }
+]
 
-  #let content-to-text0 = c => if c.has("text") {
-    c.text
-  } else if c.has("children") {
-    c.children.map(child => content-to-text1(child)).join("")
-  } else if c.has("child") {
-    content-to-text1(c.child)
-  }
+== List of Tables
 
-  #let content-to-text = content-to-text0
+#align(top + left)[
+  #context {
+    for figure in query(figure.where(kind: table)) {
+      let caption = figure.caption
+      let page = figure.location().page()
 
-  #align(top + left)[
-    #context {
-      let q = query(<links>)
-      let bodies = q.map(l => {
-        if not l.has("body") {
-          text(stroke: red, size: 30pt)[SOMETHING HAS WENT WRONG!!!!! --- #l]
-        } else {
-          content-to-text(l.body)
-        }
-      })
-      let hyperlinks = q.map(l => {
-        if not l.has("dest") {
-          text(stroke: red, size: 30pt)[SOMETHING HAS WENT WRONG!!!!! --- #l]
-        } else {
-          l.dest
-        }
-      })
-      let pages = q.map(l => l.location())
-
-      let elems = bodies
-        .zip(hyperlinks)
-        .zip(pages)
-        .map(e => {
-          let ((a, b), c) = e
-
-          (a, b, c)
-        })
-
-      show table.cell: box
-      show table.cell: set box(inset: 5pt)
-      show table.cell: set align(left + horizon)
-
-      table(
-        columns: 3,
-        table.header(repeat: true, [pg#linebreak()no], [Accompanying Text], [Link Destination]),
-        ..for (idx, (a, b, c)) in elems.enumerate() {
-          ([#link(c)[#c.page()]], [#a], [#link(b)])
-        },
-      )
+      text(size: 0.9em)[- #caption #h(1fr) #link(figure.location())[#page]]
     }
-  ]
+  }
+]
+
+== Table of Links
+
+#let content-to-text1 = c => if c.has("text") {
+  c.text
+} else if c.has("children") {
+  c.children.map(child => content-to-text0(child))
+} else if c.has("styled") {
+  content-to-text0(c.child)
+}
+
+#let content-to-text0 = c => if c.has("text") {
+  c.text
+} else if c.has("children") {
+  c.children.map(child => content-to-text1(child)).join("")
+} else if c.has("child") {
+  content-to-text1(c.child)
+}
+
+#let content-to-text = content-to-text0
+
+#align(top + left)[
+  #context {
+    let q = query(<links>)
+    let bodies = q.map(l => {
+      if not l.has("body") {
+        text(stroke: red, size: 30pt)[SOMETHING HAS WENT WRONG!!!!! --- #l]
+      } else {
+        content-to-text(l.body)
+      }
+    })
+    let hyperlinks = q.map(l => {
+      if not l.has("dest") {
+        text(stroke: red, size: 30pt)[SOMETHING HAS WENT WRONG!!!!! --- #l]
+      } else {
+        l.dest
+      }
+    })
+    let pages = q.map(l => l.location())
+
+    let elems = bodies
+      .zip(hyperlinks)
+      .zip(pages)
+      .map(e => {
+        let ((a, b), c) = e
+
+        (a, b, c)
+      })
+
+    show table.cell: box
+    show table.cell: set box(inset: 5pt)
+    show table.cell: set align(left + horizon)
+
+    table(
+      columns: 3,
+      table.header(repeat: true, [pg#linebreak()no], [Accompanying Text], [Link Destination]),
+      ..for (idx, (a, b, c)) in elems.enumerate() {
+        ([#link(c)[#c.page()]], [#a], [#link(b)])
+      },
+    )
+  }
 ]
