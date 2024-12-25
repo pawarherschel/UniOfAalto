@@ -2,6 +2,7 @@
 #let time-elapsed = state("time-elapsed", 0)
 
 #let script-target = 110
+#let fps = 25
 
 #let double-digit(number) = if str(number).len() >= 2 {
   number
@@ -23,6 +24,8 @@
   [#double-digit-trunc(minutes):#double-digit-trunc(seconds)]
 }
 
+#let time-to-frames(seconds) = calc.floor((seconds / script-target) * (fps * script-target))
+
 #let next-slide(budget: 0, content) = [
   #rect(width: 100%, inset: 1em)[
     #align(horizon + center)[
@@ -37,10 +40,18 @@
           format-time(script-target - time-elapsed.get())
         }
 
+        #let start-frame = context {
+          time-to-frames(time-elapsed.get())
+        }
+
+        #let frames-budget = time-to-frames(budget)
+
         #align(left)[
-          Budget: #double-digit(budget)\s #linebreak()
+          Budget: #double-digit(budget)\s#linebreak()
           Time Elapsed: #time#linebreak()
-          Time Left: #time-left
+          Time Left: #time-left#linebreak()
+          Start Frame: #start-frame#linebreak()
+          Frames Budget: #frames-budget
         ]
 
         #time-elapsed.update(x => x + budget)

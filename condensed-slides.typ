@@ -538,6 +538,8 @@
   #text[
     - #[#link("https://www.youtube.com/@Acerola_t")[#alert[Acerola]] <links>] for the general vibes of the presentation
     - #[#link("https://www.youtube.com/@NoBoilerplate")[#alert[No Boilerplate]] <links>] for the introduction
+    - #[#link("https://www.youtube.com/@chrishayuk")[#alert[Chris Hay]] <links>] for some crative inspiration (webcam editing style)
+    - #[#link("https://www.youtube.com/@Leadhead")[#alert[Leadhead]] <links>] for some more creative inspiration (game backgrounds while speaking to the camera)
   ]
 ]
 
